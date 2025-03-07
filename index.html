@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dịch Vụ Tăng Tương Tác</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Dịch Vụ Tăng Tương Tác TikTok, Facebook, YouTube</h1>
+        <p>Chọn nền tảng và dịch vụ bạn muốn sử dụng!</p>
+
+        <div class="platform-selector">
+            <button onclick="selectPlatform('tiktok')">TikTok</button>
+            <button onclick="selectPlatform('facebook')">Facebook</button>
+            <button onclick="selectPlatform('youtube')">YouTube</button>
+        </div>
+
+        <div id="service-form" class="service-form">
+            <h2 id="platform-title">Chọn nền tảng để bắt đầu</h2>
+            <form id="interaction-form" onsubmit="submitRequest(event)">
+                <label for="link">Link (Video/Bài viết/Kênh):</label>
+                <input type="text" id="link" placeholder="Dán link tại đây" required>
+
+                <label for="service">Chọn dịch vụ:</label>
+                <select id="service" required>
+                    <option value="">-- Chọn dịch vụ --</option>
+                    <option value="follow">Tăng Follow</option>
+                    <option value="view">Tăng View Video</option>
+                    <option value="live-view">Tăng View Live</option>
+                    <option value="like">Tăng Tym/Like</option>
+                    <option value="share">Tăng Share</option>
+                </select>
+
+                <label for="quantity">Số lượng:</label>
+                <input type="number" id="quantity" min="1" placeholder="Nhập số lượng" required>
+
+                <button type="submit">Gửi Yêu Cầu</button>
+            </form>
+            <p id="result"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
